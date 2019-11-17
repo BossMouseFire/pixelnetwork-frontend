@@ -1,0 +1,29 @@
+.auth{
+    border-radius: 8px;
+    padding: 20px;
+    height: 290px;
+    width: 350px;
+    margin-top: 3%;
+    margin-left: 68%;
+    background-color: white;
+}
+.sign{
+    border-radius: 8px;
+    padding: 20px;
+    height: 335px;
+    width: 350px;
+    margin-top: 3%;
+    margin-left: 68%;
+    background-color: white;
+}
+.sign_box{
+    display: flex;
+}
+
+.name{
+    margin-left: 10px;
+}
+.button_auth{
+    margin-top: 5%;
+    margin-left: 18%;
+}
