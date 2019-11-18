@@ -5,7 +5,7 @@
     width: 350px;
     margin-top: 10%;
     margin-left: 135%;
-    background-color: white;
+    background-color: #e0c2ff;
 }
 .sign{
     border-radius: 8px;
@@ -14,7 +14,7 @@
     width: 350px;
     margin-top: 5%;
     margin-left: 135%;
-    background-color: white;
+    background-color: #e0c2ff;
 }
 .sign_box{
     display: flex;
