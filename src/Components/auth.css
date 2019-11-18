@@ -1,10 +1,10 @@
 .auth{
     border-radius: 8px;
-    padding: 20px;
-    height: 290px;
+    padding: 30px;
+    height: 250px;
     width: 350px;
-    margin-top: 3%;
-    margin-left: 68%;
+    margin-top: 10%;
+    margin-left: 135%;
     background-color: white;
 }
 .sign{
@@ -12,8 +12,8 @@
     padding: 20px;
     height: 335px;
     width: 350px;
-    margin-top: 3%;
-    margin-left: 68%;
+    margin-top: 5%;
+    margin-left: 135%;
     background-color: white;
 }
 .sign_box{
@@ -26,4 +26,16 @@
 .button_auth{
     margin-top: 5%;
     margin-left: 18%;
+}
+.box{
+    display: flex;
+}
+.packman{
+    width: 500px;
+    height: 500px;
+    margin-top: 15%;
+    margin-left: 17%;
+}
+.logo {
+    background-color: #4d1b80;
 }
