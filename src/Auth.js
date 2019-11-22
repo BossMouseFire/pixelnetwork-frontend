@@ -10,9 +10,9 @@ class Auth extends React.Component {
             "(?:^|; )" + 'token'.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
         ));
         if(access_token === null){
-            history.push('login')
+
         }else if (localStorage.getItem('token') === access_token[1]) {
-            history.push('test')
+
         }
     }
     state = {

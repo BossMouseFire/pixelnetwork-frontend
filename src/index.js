@@ -9,6 +9,7 @@ ReactDOM.render(
     <Router history={history}>
         <Switch>
             <Route path={"/login/"} component={Auth}/>
+            <Redirect exact from='/' to='/login' />
         </Switch>
     </Router>,
     document.getElementById('root')
