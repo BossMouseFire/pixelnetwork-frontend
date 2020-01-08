@@ -1,18 +1,18 @@
 import React from 'react'
-import {Form, Button, Navbar, Alert} from 'react-bootstrap'
+import {Form, Button, Navbar} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Components/auth.css'
+import './auth.css'
 import axios from 'axios';
-import history from './history'
+import history from "../Components/history"
 class Auth extends React.Component {
     componentDidMount() {
         const access_token = document.cookie.match(new RegExp(
             "(?:^|; )" + 'token'.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
         ));
         if(access_token === null){
-
+            //history.push('login')
         }else if (localStorage.getItem('token') === access_token[1]) {
-
+            //history.push('main')
         }
     }
     state = {
@@ -50,6 +50,7 @@ class Auth extends React.Component {
                 console.log(res["access_token"]);
                 document.cookie = `token=${res["access_token"]}`;
                 localStorage.setItem('token', res["access_token"]);
+                document.cookie = `set=true`;
             })
             .catch(error => {
                 console.log(error.response);
@@ -85,7 +86,7 @@ class Auth extends React.Component {
                 </div>
                 <div className={'box'}>
                     <div className={'logo_box'}>
-                        <img src={require("./image/logo.png")} className={'packman'} alt={"Лого"}/>
+                        <img src={require("../image/logo.png")} className={'packman'} alt={"Лого"}/>
                     </div>
                     <div className={'authorization_box'}>
                         <div className={'auth'}>
@@ -97,7 +98,7 @@ class Auth extends React.Component {
                                     <Form.Control type="password" placeholder="Пароль" onChange={this.handleChangePassword} style={{backgroundColor: '#eddefc'}}/>
                                 </Form.Group>
                                 <div className={'checkbox'}>
-                                    <Button variant="primary" type="submit" onClick={this.Sign}>
+                                    <Button variant="primary" type="submit" className={"button_sign"} onClick={this.Sign}>
                                         Войти
                                     </Button>
                                     <Form.Group controlId="formBasicChecbox" className={"checkbox_button"}>
@@ -125,7 +126,7 @@ class Auth extends React.Component {
                                 <Form.Group controlId="formBasicPassword">
                                     <Form.Control  type="password" placeholder="Повторите пароль" style={{backgroundColor: '#eddefc'}}  onChange={this.handelChangePassword_confirmation}/>
                                 </Form.Group>
-                                <Button className={'button_auth'} variant="success" type="submit" onClick={this.Auth}>
+                                <Button variant="success " className={"d-block mx-auto"} type="submit" onClick={this.Auth}>
                                     Зарегистрироваться
                                 </Button>
                             </form>
@@ -136,5 +137,4 @@ class Auth extends React.Component {
         )
     }
 }
-
 export default Auth;

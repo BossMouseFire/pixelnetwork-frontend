@@ -21,29 +21,25 @@
 .name{
     margin-left: 10px;
 }
-.button_auth{
-    margin-top: 1%;
-    margin-left: 20%;
-}
 .box{
     display: flex;
 }
 .packman{
-    max-width: 100%;
-    max-height: 90%;
-    margin-top: 10%;
-    margin-left: 8%;
+    max-width: 55%;
+    max-height: 55%;
+    margin-top: 3%;
+    margin-left: 7%;
 }
 .logo{
     background-color: #4d1b80;
 }
 .logo_box{
-    width: 40%;
-    height: 70%;
+    height: 100%;
+    flex: 0.95;
 }
 .authorization_box{
+    height: 100%;
     width: 25%;
-    margin-left: 30%;
 }
 .logo_text{
     font-family: VC;
